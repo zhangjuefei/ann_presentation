@@ -42,7 +42,7 @@ dnn = tf.contrib.learn.DNNClassifier(
     feature_columns=feature_columns
 )
 
-# 训练，mini batch size:50 ，迭代数 10000（每一个样本参与一次训练算一次迭代）
+# 训练，mini batch size:50 ，迭代 n_epochs 个 epoch 。
 dnn.fit(x=train.images, y=train.labels.astype("int"), batch_size=n_epochs, steps=steps)
 
 # 预测以及正确率。
